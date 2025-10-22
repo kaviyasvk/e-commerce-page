@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop premium wireless headphones with active noise cancellation, 30-hour battery life, and studio-quality sound. Free shipping on orders over $50.">
+    <meta name="keywords" content="wireless headphones, premium headphones, noise cancellation, audio, tech products">
+    <title>TechStore - Premium Wireless Headphones</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">MyStore</h1>
+                <nav class="nav">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Products</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=800&fit=crop" alt="Premium Wireless Headphones" class="main-image">
+                    </div>
+                    <div class="thumbnail-grid">
+                        <button class="thumbnail active" onclick="changeImage(0)">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop" alt="Front View">
+                        </button>
+                        <button class="thumbnail" onclick="changeImage(1)">
+                            <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=200&h=200&fit=crop" alt="Side View">
+                        </button>
+                        <button class="thumbnail" onclick="changeImage(2)">
+                            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=200&h=200&fit=crop" alt="Detail View">
+                        </button>
+                        <button class="thumbnail" onclick="changeImage(3)">
+                            <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=200&h=200&fit=crop" alt="Top View">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <span class="badge badge-success">In Stock</span>
+                    <h1 class="product-title">Premium Wireless Headphones</h1>
+                    <p class="product-subtitle">Experience studio-quality sound with active noise cancellation</p>
+
+                    <!-- Rating -->
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">(4.8 out of 5 - 2,847 reviews)</span>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="price-container">
+                        <span class="price">$299.99</span>
+                        <span class="old-price">$399.99</span>
+                        <span class="badge badge-sale">25% OFF</span>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="selection-group">
+                        <label class="selection-label">Color</label>
+                        <div class="color-options">
+                            <button class="color-btn active" data-color="silver" onclick="selectColor(this)">
+                                <span class="color-swatch color-silver"></span>
+                            </button>
+                            <button class="color-btn" data-color="black" onclick="selectColor(this)">
+                                <span class="color-swatch color-black"></span>
+                            </button>
+                            <button class="color-btn" data-color="purple" onclick="selectColor(this)">
+                                <span class="color-swatch color-purple"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="selection-group">
+                        <label class="selection-label">Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQuantity()">-</button>
+                            <span class="quantity" id="quantity">1</span>
+                            <button class="qty-btn" onclick="increaseQuantity()">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="addToCart()">
+                            🛒 Add to Cart
+                        </button>
+                        <button class="btn btn-outline" onclick="addToWishlist()">
+                            ♥
+                        </button>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🚚</span>
+                            <div>
+                                <p class="feature-title">Free Shipping</p>
+                                <p class="feature-text">On orders over $50</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🛡️</span>
+                            <div>
+                                <p class="feature-title">2 Year Warranty</p>
+                                <p class="feature-text">Full coverage</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔄</span>
+                            <div>
+                                <p class="feature-title">30-Day Returns</p>
+                                <p class="feature-text">Money-back guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="description">
+                        <h2 class="section-title">Product Description</h2>
+                        <p class="description-text">
+                            Immerse yourself in premium audio quality with our flagship wireless headphones. 
+                            Featuring industry-leading active noise cancellation, 40mm drivers for rich, detailed sound, 
+                            and up to 30 hours of battery life. The ergonomic design ensures all-day comfort, 
+                            while premium materials guarantee lasting durability.
+                        </p>
+                        <ul class="feature-list">
+                            <li>✓ Active Noise Cancellation (ANC) technology</li>
+                            <li>✓ 30-hour battery life with quick charging</li>
+                            <li>✓ Premium memory foam ear cushions</li>
+                            <li>✓ Multipoint connectivity for seamless device switching</li>
+                            <li>✓ Built-in microphone with voice assistant support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specifications -->
+            <div class="specifications">
+                <h2 class="section-title">Technical Specifications</h2>
+                <div class="spec-grid">
+                    <div class="spec-column">
+                        <div class="spec-row">
+                            <span class="spec-label">Driver Size</span>
+                            <span class="spec-value">40mm</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Frequency Response</span>
+                            <span class="spec-value">20Hz - 20kHz</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Impedance</span>
+                            <span class="spec-value">32 Ohm</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Sensitivity</span>
+                            <span class="spec-value">110 dB</span>
+                        </div>
+                    </div>
+                    <div class="spec-column">
+                        <div class="spec-row">
+                            <span class="spec-label">Battery Life</span>
+                            <span class="spec-value">30 hours</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Charging Time</span>
+                            <span class="spec-value">2.5 hours</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Bluetooth Version</span>
+                            <span class="spec-value">5.3</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Weight</span>
+                            <span class="spec-value">250g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 TechStore. All rights reserved. | E-commerce Product Page - Task 2</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
